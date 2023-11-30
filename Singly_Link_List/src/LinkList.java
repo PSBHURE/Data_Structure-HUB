@@ -16,12 +16,26 @@ public class LinkList {
 	{
 		Node newNode=new Node(data);
 		if(newNode==null)
+		{
 			return false;
+		}
 		if (head==null)
 		{
 			head=newNode;
+			return true;
 		}
-		return true;
+		else
+		{
+			Node temp=head;
+			while(temp.getNext()!=null)
+			{
+				temp=temp.getNext();
+			}
+			temp.setNext(newNode);
+			
+			return true;
+		}
+		
 	}
 	public void display()
 	{
