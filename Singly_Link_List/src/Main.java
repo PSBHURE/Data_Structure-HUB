@@ -12,6 +12,12 @@ public class Main {
 	l1.insert(77);
 	l1.display();
 	System.out.println();
+	l1.insert(111,5);
+	l1.display();
+	System.out.println();
+	l1.insert(111,10);
+	l1.display();
+	System.out.println();
 	}
 
 }
