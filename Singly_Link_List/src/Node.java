@@ -1,5 +1,3 @@
-package practice;
-
 public class Node {
 private int data;
 private Node next;
@@ -24,5 +22,4 @@ public Node getNext()
 {
 	return next;
 }
-
 }
