@@ -63,6 +63,44 @@ public class LinkList {
 			prev.setNext(newNode);
 			return true;
 	}
+	public boolean deletingFirstNode()
+	{
+		if(head==null)
+			return false;
+		else
+		{
+			Node temp=head;
+			head=temp.getNext();
+			return true;
+		}
+	}
+	public boolean deletingNodeAtPosition(int position)
+	{
+		if(position<=0)
+			return false;
+		if(position==1)
+		{
+			deletingFirstNode();
+			return true;
+		}
+		else
+		{
+			Node pre=head;
+			Node delete=pre.getNext();
+			for(int i=1;i<position-1;i++)
+			{
+				
+				pre=delete;
+				delete=delete.getNext();
+				if(delete==null)
+					return false;
+			}
+			pre.setNext(delete.getNext());
+			return false;
+		}
+	}
+	
+	
 	public void display()
 	{
 		Node temp=head;
