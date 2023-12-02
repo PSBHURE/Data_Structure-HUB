@@ -16,6 +16,9 @@ public class Main {
 		l1.deleteFirstNode();
 		l1.display();
 		System.out.println();
+		l1.deleteLastNode();
+		l1.display();
+		System.out.println();
 	}
 
 }

@@ -47,6 +47,18 @@ public void deleteFirstNode()
 	head=temp.getNext();
 	tail.setNext(head);
 }
+public void deleteLastNode()
+{
+	Node temp=head;
+	Node delete=temp.getNext();
+	while(temp.getNext()!=tail)
+	{
+		temp=delete;
+		delete=delete.getNext();
+	}
+	tail=temp;
+	temp.setNext(head);
+}
 public void display()
 {
 	Node temp=head;
