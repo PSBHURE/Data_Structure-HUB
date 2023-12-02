@@ -19,6 +19,14 @@ public class Main {
 		l1.deleteLastNode();
 		l1.display();
 		System.out.println();
+		l1.insert(400);
+		l1.insert(500);
+		l1.insert(600);
+		l1.display();
+		System.out.println();
+		l1.deleteLastNode();
+		l1.display();
+		System.out.println();
 	}
 
 }
