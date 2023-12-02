@@ -1,4 +1,3 @@
-
 public class CircularLinkList {
 private Node head;
 private Node tail;
@@ -21,28 +20,6 @@ public void setTail(Node tail) {
 }
 public boolean insert(int data)
 {
-//	Node newNode=new Node(data);
-//	if(newNode==null)
-//		return false;
-//	if(head==null)
-//	{
-//		head=newNode;
-//		tail=newNode;
-//		newNode.setNext(head);
-//		return true;
-//	}
-//	else
-//	{
-//		Node temp=head;
-//		while(temp.getNext()!=null){
-//			temp=temp.getNext();
-//		}
-//		tail=temp;
-//		tail.setNext(newNode);
-//		tail=newNode;
-//		newNode.setNext(head);
-//		return true;
-//	}
 	Node newNode=new Node(data);
 	if(newNode==null)
 		return false;
@@ -62,10 +39,14 @@ public boolean insert(int data)
 		temp.setNext(newNode);
 		tail=newNode;
 		newNode.setNext(head);
-		return true;
-		
+		return true;	
 	}
-
+public void deleteFirstNode()
+{
+	Node temp=head;
+	head=temp.getNext();
+	tail.setNext(head);
+}
 public void display()
 {
 	Node temp=head;
@@ -76,5 +57,4 @@ public void display()
 		temp=temp.getNext();
 	}while(temp!=head);
 }
-
 }
