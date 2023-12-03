@@ -33,6 +33,29 @@ public boolean insert(int data)
 		return true;
 	}
 }
+public boolean insert(int data,int p)
+{
+ if(p<=0)
+	 return false;
+ if(p==1)
+ {
+	 insert(data);
+	 return true;
+ }
+ Node newNode=new Node(data);
+ Node tempP=head;
+ Node tempN=tempP.getNext();
+ for(int i=1;i<p-1;i++)
+ {
+	 tempP=tempN;
+	 tempN=tempP.getNext();
+ }
+ newNode.setPrev(tempP);
+ newNode.setNext(tempN);
+ tempP.setNext(newNode);
+ tempN.setPrev(newNode);
+ return true;
+}
 public void display()
 {
 	Node temp=head;
