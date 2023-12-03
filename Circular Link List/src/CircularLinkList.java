@@ -63,19 +63,28 @@ public void delete(int position)
 {
 	Node temp=head;
 	Node delete=temp.getNext();
-	for(int i=1;i<position-1;i++)
+	if(position<=0)
+		return;
+	if(position==1)
 	{
-		temp=delete;
-		delete=delete.getNext();
+		head=temp.getNext();
+		tail.setNext(head);
+		return;
 	}
-	temp.setNext(delete.getNext());
-//	if(delete==tail)
-//	{
-//		tail=temp;
-//		temp.setNext(head);
-//	}
-//	if(temp.getNext()==head)
-//		return;
+	else
+	{
+		Node prev=head;
+		Node del=temp.getNext();
+		for(int i=1;i<position-1;i++)
+		{
+			prev=del;
+			del=del.getNext();
+		}
+		prev.setNext(del.getNext());
+		
+	}
+		
+	
 }
 public void display()
 {

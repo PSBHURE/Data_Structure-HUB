@@ -22,18 +22,18 @@ public class Main {
 		System.out.println("\ndelete last node result");
 		l1.deleteLastNode();
 		l1.display();
-		
-
-
-		//l1.delete(1);
-//		l1.display();
-//		System.out.println();
-//		l1.delete(6);
-//		l1.display();
-//		System.out.println();
-//		//l1.delete(10);
-//		l1.display();
-//		System.out.println();
+		System.out.println("\ndelete positioal node result");
+		l1.delete(1);
+		l1.display();
+		System.out.println();
+		l1.delete(3);
+		l1.display();
+		System.out.println();
+		l1.delete(30);
+		l1.display();
+		System.out.println();
+		l1.delete(30);
+		l1.display();
 	}
 
 }
