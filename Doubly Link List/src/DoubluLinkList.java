@@ -18,10 +18,28 @@ public boolean insert(int data)
 		tail=head;
 		return true;
 	}
-	return true;
+	else
+	{
+		tail.setNext(newNode);
+		newNode.setPrev(tail);
+		tail=newNode;
+//		Node temp=head;
+//		while(temp.getNext()!=null)
+//		{
+//			temp=temp.getNext();
+//		}
+//		temp.setNext(newNode);
+//		newNode.setPrev(temp);
+		return true;
+	}
 }
 public void display()
 {
-	System.out.println(head.getData());
+	Node temp=head;
+	while(temp!=null)
+	{
+		System.out.print(temp.getData()+" ");
+		temp=temp.getNext();
+	}
 }
 }
