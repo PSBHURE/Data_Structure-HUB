@@ -59,6 +59,24 @@ public void deleteLastNode()
 	tail=temp;
 	temp.setNext(head);
 }
+public void delete(int position)
+{
+	Node temp=head;
+	Node delete=temp.getNext();
+	for(int i=1;i<position-1;i++)
+	{
+		temp=delete;
+		delete=delete.getNext();
+	}
+	temp.setNext(delete.getNext());
+//	if(delete==tail)
+//	{
+//		tail=temp;
+//		temp.setNext(head);
+//	}
+//	if(temp.getNext()==head)
+//		return;
+}
 public void display()
 {
 	Node temp=head;
