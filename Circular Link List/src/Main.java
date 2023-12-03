@@ -32,6 +32,9 @@ public class Main {
 		l1.delete(30);
 		l1.display();
 		System.out.println();
+		l1.delete(30);
+		l1.display();
+		
 	}
 
 }

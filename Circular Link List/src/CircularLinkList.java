@@ -79,6 +79,10 @@ public void delete(int position)
 		{
 			prev=del;
 			del=del.getNext();
+			if(del==head)
+			{
+				return;
+			}
 		}
 		prev.setNext(del.getNext());
 		
