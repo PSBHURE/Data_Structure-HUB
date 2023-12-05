@@ -8,31 +8,33 @@ public class Stack <T> {
         top = -1;
         arr = (T [] ) new Object[size];
     }
-    public boolean isempty()
-    {
-    	return top==-1;
+
+    public boolean isEmpty() {
+        return top == -1;
     }
-    public boolean isfull()
-    {
-    	return top==size-1;
+
+    public boolean isFull() {
+        return top == size - 1;
     }
-    public boolean push(T data)
-    {
-    	if(isfull())
-    	{
-    		return false;
-    	}
-    	arr[++top]=data;
-    	return true;
+
+    public boolean push(T data) {
+        if(isFull()) {
+            return false;
+        }
+
+        arr[++top] = data;
+        return true;
     }
-    public T pop()
-    {
-    	if(isempty())
-    		return null;
-    	return arr[top--];
+
+    public T pop() {
+        if(isEmpty()) {
+            return null;
+        }
+        return arr[top--];
     }
+
     public T peek() {
-        if(isempty()) {
+        if(isEmpty()) {
             return null;
         }
 
