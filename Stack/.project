@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Doubly Link List</name>
+	<name>STACK</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1709349471201</id>
+			<id>1709349471211</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

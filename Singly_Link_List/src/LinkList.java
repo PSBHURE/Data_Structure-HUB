@@ -100,7 +100,24 @@ public class LinkList {
 		}
 	}
 	
-	
+	public void Reverse()
+	{
+		if(head==null || head.getNext()==null)
+		return;
+		Node prevNode=head;
+		Node currNode=head.getNext();
+		
+		while(currNode!=null)
+		{
+		Node nextNode=currNode.getNext();
+		currNode.setNext(prevNode);
+		prevNode=currNode;
+		currNode=nextNode;
+		
+		}
+		head.setNext(null);
+		head=prevNode;
+	}
 	public void display()
 	{
 		Node temp=head;

@@ -34,6 +34,8 @@ public class Main {
 	l1.deletingNodeAtPosition(8);
 	l1.display();
 	System.out.println();
+	l1.Reverse();
+	l1.display();
 	}
 	
 
